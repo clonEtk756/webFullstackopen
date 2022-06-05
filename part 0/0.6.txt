@@ -1,0 +1,10 @@
+title Create a New Note with SPA
+
+note over browser:
+js event handler creates a new note,
+adds it to the json file,
+rerenders the page with a new note
+and sends updated json to server
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
