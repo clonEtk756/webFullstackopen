@@ -6,12 +6,34 @@ const Header = (props) => {
   )
 }
 
+/*
+Content for 1.1
+
 const Content = (props) => {
   return (
     <div>
       <p>{props.parts[0]} {props.exercises[0]}</p>
       <p>{props.parts[1]} {props.exercises[1]}</p>
       <p>{props.parts[2]} {props.exercises[2]}</p>
+    </div>
+  )
+}
+*/
+
+const Part = (props) => {
+  return (
+    <div>
+      <p>{props.name} {props.num}</p>
+    </div>
+  )
+}
+
+const Content = (props) => {
+  return (
+    <div>
+      <Part name={props.parts[0]} num={props.exercises[0]} />
+      <Part name={props.parts[1]} num={props.exercises[1]} />
+      <Part name={props.parts[2]} num={props.exercises[2]} />
     </div>
   )
 }
@@ -23,7 +45,6 @@ const Total = (props) => {
     </div>
   )
 }
-
 
 const App = () => {
   const course = 'Half Stack application development'
