@@ -1,17 +1,30 @@
-const App = () => {
-  console.log('Hello from component!')
-
-  const now = new Date()
-  const a = 10
-  const b = 20
-
+const Hello = (props) => {
   return (
     <div>
-      <p>Hello world, it is {now.toString()}</p>
-      <p>
-        {a} plus {b} is {a + b}
-      </p>
+      <p>Hello {props.name}, you are {props.age} years old</p>
     </div>
+  )
+}
+
+const Footer = () => {
+  return (
+    <div>
+      Greeting app created by <a href="https://github.com/mluukkai">mluukkai</a>
+    </div>
+  )
+}
+
+const App = () => {
+  const name = 'Katya'
+  const age = 21
+
+  return (
+    <>
+      <h1>Greetings</h1>
+      <Hello name="Gosha" age={10 + 9} />
+      <Hello name={name} age={age} />
+      <Footer />
+    </>
   )
 }
 
